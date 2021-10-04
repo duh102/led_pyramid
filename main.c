@@ -5,12 +5,13 @@
 #include "dim_curve.h"
 #include "patterns/matrix.h"
 #include "patterns/fireworks.h"
+#include "patterns/fire.h"
 
 // reserving 3*(leds) bytes for keeping the data easily accessible
 uint8_t colors[MAX_LED][3];
 uint8_t state_indices[MAX_LED];
 
-#define DISPLAYS 3
+#define DISPLAYS 4
 uint8_t state = 0;
 uint8_t display = 0;
 
@@ -139,10 +140,14 @@ int main(void)
             firework_loop();
             delay(150);
             break;
+          case 1:
+            fire_loop();
+            delay(50);
+            break;
           case DISPLAYS-1:
           default:
             matrix_loop();
-            delay(100);
+            delay(20);
         }
 
         for( uint32_t i = 0; i < MAX_LED; i++) {

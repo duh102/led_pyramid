@@ -6,7 +6,7 @@ APP=main
 
 PATTERNS=$(wildcard patterns/*.c)
 
-OBJS=$(BOOTUP) $(APP).o $(PATTERNS:%.c=%.o) 
+OBJS=$(BOOTUP) $(APP).o $(PATTERNS:%.c=%.o) hsv_rgb.o
 
 # Tools
 CC=arm-none-eabi-gcc

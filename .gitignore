@@ -1,1 +1,5 @@
 nohup.out
+*.o
+*.d
+*.hex
+*.elf
