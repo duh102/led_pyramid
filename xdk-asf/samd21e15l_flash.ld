@@ -1,0 +1,1 @@
+/home/juggernaut/teensy/atsamd21e15l/xdk-asf-3.48.0/sam0/utils/linker_scripts/samd21/gcc/samd21e15l_flash.ld
